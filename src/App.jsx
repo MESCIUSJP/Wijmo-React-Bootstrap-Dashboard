@@ -19,7 +19,7 @@ import { recentSales, salesByStore, salesByProducts } from './data/data';
 // 売上チャートやゲージなどのパネル表示用コンポーネント
 const ChartPanel = ({ title, children }) => {
   return (
-    <div className="col-lg-4 col-md-6 col-12 mt-1">
+    <div className="col-lg-4 col-md-6 col-sm-12 mt-1">
       <div className="card dashboardPanel h-60">
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
@@ -33,7 +33,7 @@ const ChartPanel = ({ title, children }) => {
 // 取引リストなどデータ表示用パネルコンポーネント
 const DataPanel = ({ title, children }) => {
   return (
-    <div className="col-12">
+    <div className="col-sm-12">
       <div className="card dashboardRow">
         <div className="card-body">
           <h5 className="card-title">{title}</h5>
@@ -142,12 +142,12 @@ class App extends Component {
   render() {
     return (
       <div className="container">
-        <div className="row g-3">
+        <div className="row">
           <Gauge data={this.calculateSales()} />
           <SalesChart salesData={this.state.salesByStore} />
           <SalesPie salesData={this.state.salesByProducts} />
         </div>
-        <div className="row g-3">
+        <div className="row">
           <TransactionList transactions={this.state.recentSales} />
         </div>
       </div>
