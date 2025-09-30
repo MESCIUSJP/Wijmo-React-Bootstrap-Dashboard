@@ -73,7 +73,7 @@ const SalesChart = ({ salesData }) => {
         style={{ height: '290px' }}
         palette={['rgba(171,125,246, 1)']}
       >
-        <FlexChartSeries name="Sales" binding="sales" />
+        <FlexChartSeries name="売上" binding="sales" />
       </FlexChart>
     </ChartPanel>
   );
