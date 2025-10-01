@@ -1,12 +1,12 @@
 /* 全体背景 */
 html,
 body {
-  background: rgba(0, 193, 213, 1);
+  background: rgba(0 193 213 / 1);
 }
 
 /* 見出しのスタイル */
 h5 {
-  color: white!important;
+  color: white !important;
   padding: 8px;
 }
 
@@ -25,7 +25,7 @@ h5 {
 
 /* カードの中身の背景色と余白 */
 .card-body {
-  background: rgba(19, 124, 144, 1);
+  background: rgba(19 124 144 / 1);
   padding: 0px;
 }
 
@@ -36,13 +36,13 @@ h5 {
 
 /* Bootstrapのbg-lightを上書き（背景色変更） */
 .bg-light {
-  background-color: rgba(19, 124, 144, 1) !important;
+  background-color: rgba(19 124 144 / 1) !important;
 }
 
 /* ゲージ */
 .gauge {
   min-height: 290px;
-  background: rgba(21, 96, 115, 1);
+  background: rgba(21 96 115 / 1);
   padding: 10px;
   padding-top: 40px;
 }
@@ -53,17 +53,16 @@ h5 {
   font-weight: 700;
 }
 
-.gauge .wj-min,
-.gauge .wj-max {
-  fill: rgba(135, 166, 191, 1);
+.gauge :is(.wj-min, .wj-max){
+  fill: rgba(135 166 191 / 1);
 }
 
 .gauge .wj-pointer {
-  fill: rgba(171, 125, 246, 1);
+  fill: rgba(171 125 246 / 1);
 }
 
 .gauge .wj-face path {
-  fill: rgba(135, 166, 191, 1);
+  fill: rgba(135 166 191 / 1);
   stroke-width: 0px;
 }
 
@@ -73,12 +72,11 @@ h5 {
   padding: 10px;
   margin: 0px;
   border: none !important;
-  background: rgba(21, 96, 115, 1) !important;
+  background: rgba(21 96 115 / 1) !important;
 }
 
 /* Wijmoテーマによるデフォルトの下余白を削除 */
-.wj-control.wj-flexchart,
-.wj-control.wj-flexpie {
+.wj-control:is(.wj-flexchart, .wj-flexpie) {
   margin-bottom: 0 !important;
 }
 
@@ -88,64 +86,52 @@ h5 {
 }
 
 /* Wijmoによって生成された白いプロット矩形/境界を削除 */
-.wj-flexchart svg .wj-plot-area > path,
-.wj-flexchart svg .wj-plot-area > rect,
-.wj-flexpie svg .wj-plot-area > path,
-.wj-flexpie svg .wj-plot-area > rect {
+:is(.wj-flexchart, .wj-flexpie) svg .wj-plot-area > :is(path, rect) {
   stroke: none !important;
   fill: transparent !important;
 }
 
 /* SVGの背景を透明にしてカード色を反映 */
-.wj-flexchart svg,
-.wj-flexpie svg {
+:is(.wj-flexchart, .wj-flexpie) svg {
   background: transparent !important;
 }
 
 .wj-flexchart .wj-axis-x .wj-line {
-  stroke: rgba(135, 166, 191, 1);
+  stroke: rgba(135 166 191 / 1);
   stroke-width: 1px;
 }
 .wj-flexchart .wj-axis-y .wj-gridline {
-  stroke: rgba(135, 166, 191, 1);
+  stroke: rgba(135 166 191 / 1);
   stroke-width: 1px;
 }
 
 /* ダーク背景でのラベルの視認性向上 */
-.wj-flexchart .wj-label,
-.wj-flexpie .wj-label,
-.wj-flexchart .wj-axis-x .wj-label,
-.wj-flexchart .wj-axis-y .wj-label,
-.wj-legend .wj-label {
+:is(.wj-flexchart, .wj-flexpie, .wj-legend) .wj-label,
+.wj-flexchart :is(.wj-axis-x, .wj-axis-y) .wj-label  {
   fill: #e6f4f8 !important; /* brighter text */
 }
 
-.wj-flexchart .wj-label,
-.wj-flexpie .wj-label {
-  fill: rgba(135, 166, 191, 1);
+:is(.wj-flexchart, .wj-flexpie) .wj-label {
+  fill: rgba(135 166 191 / 1);
 }
 
 .wj-flexchart .wj-axis-x .wj-line {
-  stroke: rgba(135, 166, 191, 1);
+  stroke: rgba(135 166 191 / 1);
   stroke-width: 1px;
 }
 .wj-flexchart .wj-axis-y .wj-gridline {
-  stroke: rgba(135, 166, 191, 1);
+  stroke: rgba(135 166 191 / 1);
   stroke-width: 1px;
 }
 
 .wj-legend .wj-label {
-  fill: rgba(135, 166, 191, 1);
+  fill: rgba(135 166 191 / 1);
 }
 
 /* --- フレックスグリッド --- */
 .wj-flexgrid,
-.wj-flexgrid .wj-root,
-.wj-flexgrid .wj-cells,
-.wj-flexgrid .wj-colheaders,
-.wj-flexgrid .wj-rowheaders,
-.wj-flexgrid .wj-topleft {
-  background: rgb(21, 96, 115) !important;
+.wj-flexgrid :is(.wj-root, .wj-cells, .wj-colheaders, .wj-rowheaders, .wj-topleft) {
+  background: rgb(21 96 115) !important;
 }
 
 .wj-flexgrid {
@@ -161,32 +147,24 @@ h5 {
 
 /* ヘッダー部の背景色・文字色・太字（Wijmo/Bootstrapの上書き） */
 .wj-flexgrid .wj-header,
-.wj-flexgrid .wj-colheaders .wj-cell,
-.wj-flexgrid .wj-rowheaders .wj-cell,
-.wj-flexgrid .wj-topleft .wj-cell {
-  background: rgb(19, 88, 109) !important;
+.wj-flexgrid :is(.wj-colheaders, .wj-rowheaders, .wj-topleft) .wj-cell {
+  background: rgb(19 88 109) !important;
   color: #fff !important;
   font-weight: 700;
 }
 
 /* 選択行・複数選択行の背景色 */
 .wj-flexgrid .wj-state-selected {
-  background: rgb(171, 125, 246) !important;
+  background: rgb(171 125 246) !important;
 }
 .wj-flexgrid .wj-state-multi-selected {
-  background: rgba(171, 125, 246, 0.3) !important;
+  background: rgba(171 125 246 / 0.3) !important;
 }
 
 /* 交互行の背景色（ダークベース上） */
-.wj-flexgrid
-  .wj-cell:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(
-    .wj-state-multi-selected
-  ) {
-  background: rgba(255, 255, 255, 0.2);
+.wj-flexgrid .wj-cell:not(:is(.wj-header, .wj-group, .wj-state-selected, .wj-state-multi-selected)) {
+  background: rgba(255 255 255 / 0.2);
 }
-.wj-flexgrid
-  .wj-alt:not(.wj-header):not(.wj-group):not(.wj-state-selected):not(
-    .wj-state-multi-selected
-  ) {
-  background: rgba(255, 255, 255, 0.3);
+.wj-flexgrid .wj-alt:not(:is(.wj-header, .wj-group, .wj-state-selected, .wj-state-multi-selected)) {
+  background: rgba(255 255 255 / 0.3);
 }
