@@ -14,6 +14,7 @@ h5 {
 .dashboardRow {
   margin-top: 20px;
 }
+
 .dashboardPanel {
   margin-top: 20px;
 }
@@ -100,6 +101,7 @@ h5 {
   stroke: rgb(135 166 191 / 1);
   stroke-width: 1px;
 }
+
 .wj-flexchart .wj-axis-y .wj-gridline {
   stroke: rgb(135 166 191 / 1);
   stroke-width: 1px;
@@ -119,6 +121,7 @@ h5 {
   stroke: rgb(135 166 191 / 1);
   stroke-width: 1px;
 }
+
 .wj-flexchart .wj-axis-y .wj-gridline {
   stroke: rgb(135 166 191 / 1);
   stroke-width: 1px;
@@ -157,6 +160,7 @@ h5 {
 .wj-flexgrid .wj-state-selected {
   background: rgb(171 125 246) !important;
 }
+
 .wj-flexgrid .wj-state-multi-selected {
   background: rgb(171 125 246 / 0.3) !important;
 }
@@ -165,6 +169,7 @@ h5 {
 .wj-flexgrid .wj-cell:not(:is(.wj-header, .wj-group, .wj-state-selected, .wj-state-multi-selected)) {
   background: rgb(255 255 255 / 0.2);
 }
+
 .wj-flexgrid .wj-alt:not(:is(.wj-header, .wj-group, .wj-state-selected, .wj-state-multi-selected)) {
   background: rgb(255 255 255 / 0.3);
 }
